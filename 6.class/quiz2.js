@@ -5,10 +5,11 @@
 // 파트타임 직원은 시간당 8000원
 
 class employee{
-    constructor(name,department,hoursPerMonth){
+    constructor(name,department,hoursPerMonth,payRate){
         this.name = name;
         this.department = department;
         this.hoursPerMonth = hoursPerMonth;
+        this.payRate = payRate;
     }
     calculatePay() {
         return this.hoursPerMonth * this.payRate;
