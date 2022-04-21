@@ -1,4 +1,4 @@
-// 콜백함수
+// 콜백함수 -> 나중에 호출해줄꼐....
 const add =(a,b) =>a+b;
 const multiple = (a,b) =>a*b;
 
