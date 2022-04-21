@@ -1,8 +1,59 @@
-// 배열 생성 방법
+// 퀴즈1: 주어진 배열 안의 딸기 아이템을 키위로 교체하는 함수를 만들기
+// 단, 주어진 배열을 수정하지 않도록!
+// input: ['🍌', '🍓', '🍇', '🍓']
+// output: [ '🍌', '🥝', '🍇', '🥝' ]
+function replace(array, from, to) {
+  return array.map((item) => (item === 
+from ? to : item));
+}
+
+const array = ['🍌', '🍓', '🍇', '🍓'];
+const result = replace(array, '🍓', '🥝');
+console.log(result);
+
+// 퀴즈2:
+// 배열과 특정한 요소를 전달받아,
+// 배열안에 그 요소가 몇개나 있는지 카운트 하는 함수 만들기
+// input: [ '🍌', '🥝', '🍇', '🥝' ], '🥝'
+// output: 2
+function count(array, item) {
+  return array.filter((value) => value === 
+item).length;
+  /*  return array.reduce((count, value) 
+=> {
+    if (value === item) {
+      count++;
+    }
+    return count;
+  }, 0); */
+}
+
+console.log(count(['🍌', '🥝', '🍇', '🥝']
+, '🥝'));
+
+// 퀴즈3: 배열1, 배열2 두개의 배열을 전달받아,
+// 배열1 아이템중 배열2에 존재하는 아이템만 담고 있는배열 반환
+// input: ['🍌', '🥝', '🍇'],  ['🍌', '🍓', '🍇', '🍓']
+// output: [ '🍌', '🍇' ]
+
+function match(input, search) {
+  return input.filter((item) => search.
+includes(item));
+}
+console.log(match(['🍌', '🥝', '🍇'], 
+['🍌', '🍓', '🍇', '🍓']));
+
+// 퀴즈 4
+// 5이상(보다 큰)의 숫자들의 평균
+const nums = [3, 16, 5, 25, 4, 34, 21];
+
+const result2 = nums
+  .filter((num) => num > 5) //
+  .reduce((avg, num) => avg + num / array.
+length, 0);
+console.log(result2);
 
 
-// 일반적으로 배열은 동일한 메모리 크기를 가지며, 연속적으로 이어져 있어함
-// 하지만 자바스크립트에서의 배열은 연속적으로 이어져 있고
-// 오브젝트와 유사함!
-// 자바스크립트의 배열은 일반적인 배열의 동작을 흉내낸 특수한 객체다!
-// 이걸 보완하기 위해서 타입이 정해져 있는 타입 배열이 있음 (Typed Collections)
+
+
+
